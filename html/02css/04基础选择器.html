@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            color: #ff0000;
+        }
+        /*id选择器优先级大于元素选择器*/
+        #div_id{
+            color: #ffc0cb;
+        }
+        /*类选择器优先级大于元素选择器*/
+        .div_class{
+            color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <div>元素选择器</div>
+    <div id="div_id">id选择器</div>
+    <div class="div_class">类选择器</div>
+</body>
+</html>

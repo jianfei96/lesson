@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="get">
+    <table>
+        <tr>
+            <td><label for="username">用户名：</label></td>
+            <td><input id="username" name="username" placeholder="请输入用户名"></td>
+        </tr>
+        <tr>
+            <td><label for="password">密码：</label></td>
+            <td><input id="password" name="password" placeholder="请输入密码"></td>
+        </tr>
+        <!--ctrl alt l 格式化代码-->
+        <tr>
+            <td><label for="email">邮箱：</label></td>
+            <td><input id="email" name="email" type="email" placeholder="请输入邮箱"></td>
+        </tr>
+        <tr>
+            <td><label for="name">姓名：</label></td>
+            <td><input id="name" name="name" type="text" placeholder="请输入姓名"></td>
+        </tr>
+        <tr>
+            <td><label for="tel">手机号：</label></td>
+            <td><input id="tel" name="tel" type="number" placeholder="请输入手机号"></td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td>
+                <input name="gender" type="radio" value="male" checked>男
+                <input name="gender" type="radio" value="female">女
+            </td>
+        </tr>
+        <tr>
+            <td>出生日期：</td>
+            <td><input type="date" name="birthday"></td>
+        </tr>
+        <tr>
+            <td><label for="cdoe">验证码：</label></td>
+            <td>
+                <input type="text" id="cdoe" name="code" placeholder="请输入验证码">
+                <img src="../img/verify_code.jpg">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"align="center"><input type="submit" value="注册"></td>
+        </tr>
+    </table>
+<!--    ?username=aaa&password=123&email=a%40a.com&name=www&tel=1111111111&gender=male&birthday=2021-01-07&code=adsf-->
+</form>
+</body>
+</html>

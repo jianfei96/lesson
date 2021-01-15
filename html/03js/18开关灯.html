@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="../img/off.gif" id="light">
+<script>
+    var light = document.getElementById('light');
+    var flag = false;
+
+    //var 方法名 = function(){}
+    light.onclick = function () {
+        if (flag) {
+            flag = false;
+            light.src = "../img/off.gif";
+        } else {
+            flag = true;
+            light.src = "../img/on.gif";
+        }
+    }
+</script>
+</body>
+</html>

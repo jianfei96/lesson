@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="#" method="get">
+        <!--label的for属性绑定id，光标聚焦-->
+        <label for="username">用户名：</label>
+        <input id="username" name="username" type="text" placeholder="请输入用户名"><br>
+        <!--value值发送到服务器-->
+        性别:
+        <input name="gender" type="radio" value="male">男
+        <input name="gender" type="radio" value="female" checked>女<br>
+        爱好：
+        <input name="hobby" type="checkbox" value="sleep">睡觉
+        <input name="hobby" type="checkbox" value="play">玩<br>
+        上传：
+        <input type="file" name="file"><br>
+        隐藏区域：
+        <input type="hidden" name="hidden"><br>
+        邮箱：
+        <input type="email" name="email"><br>
+        下拉列表：
+        <select name="select">
+            <option>请选择</option>
+            <option value="1">坂本</option>
+            <option value="2">桥本</option>
+        </select><br>
+        <!--rows行数，cols列数-->
+        <textarea rows="5" cols="20" name="des"></textarea><br>
+        <input type="submit" value="submit">
+        <!--单纯的按钮-->
+        <input type="button" value="button">
+        <!--图片按钮-->
+        <input type="image" src="../img/verify_code.jpg">
+    </form>
+</body>
+</html>

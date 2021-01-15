@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--事件的绑定1 点击事件，onclick属性,js方法调用：方法名()-->
+<!--<img src="../img/off.gif" id="light" onclick="fun()">-->
+<img src="../img/off.gif" id="light">
+<script>
+    function fun() {
+        alert('点击')
+    }
+
+    // 事件绑定2 获取图片标签对象
+    var light = document.getElementById('light');
+    //不能加()调用方法，只能写方法名
+    light.onmouseover = fun;
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //数组 在js中可以存放不同类型数据
+    //1.var arr = new Array(数据);
+    //2.var arr = new Array(长度);
+    //3.var arr = [数据];
+    var array = new Array(0, 'string', true, undefined);
+    //对象重新赋值
+    array = new Array(5);//变量被覆盖会灰掉
+    array = [1, 'str', false, null]
+    document.writeln('array: ' + array + '<br>');
+    // document.writeln(array[0] + '<br>');
+    /*对象名称.属性
+    对象名称.方法*/
+    document.writeln('length: ' + array.length + '<br>');
+    //join替换数组里的’,‘
+    document.writeln('array: ' + array.join('-') + '<br>');
+    document.writeln(array+'<br>');
+    document.writeln('push返回length: ' + array.push('push') + '<br>');
+    document.writeln('array: ' + array);
+
+
+</script>
+</body>
+</html>

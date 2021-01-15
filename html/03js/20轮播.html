@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="../img/contaner_2.gif" id="img">
+<script>
+    //从2~4轮播
+    document.getElementById('img');
+    var number = 2;
+    function fun() {
+        number++;
+        if (number > 4){
+            number = 2;
+        }
+        img.src = "../img/contaner_"+number+".gif"
+    }
+    setInterval(fun,1000);
+</script>
+</body>
+</html>

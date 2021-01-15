@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a>点击</a>
+<input type="button" id="set" value="set">
+<input type="button" id="remove" value="remove">
+
+<script>
+    var set = document.getElementById('set');
+    set.onclick = function () {
+        var a = document.getElementsByTagName('a')[0];
+        a.setAttribute("href","https://www.google.com");
+        // a.href = "https://www.google.com";
+    }
+    var remove = document.getElementById('remove');
+    remove.onclick = function () {
+        var a = document.getElementsByTagName('a')[0];
+        a.removeAttribute("href");
+    }
+</script>
+</body>
+</html>

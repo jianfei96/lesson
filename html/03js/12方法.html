@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //第二种
+    function alert_m(number, string) {
+        // alert("定义格式2");
+        document.writeln(number + ' ' + string);
+    }
+
+    alert_m(1, 'a');
+
+    function alert_m(number) {
+        // 相同名称函数会覆盖
+        document.writeln(number);
+    }
+
+    alert_m(1, 'a');
+    //第三种
+    var fun = function () {
+        document.writeln("第三种定义方法");
+        //属性：方法名称.lenth 变量个数
+    }
+    fun();
+    //属性：方法名称.lenth 变量个数
+    document.writeln(alert_m.length);
+    document.writeln(fun.length);
+
+    function add(num) {
+        return ++num;
+    }
+    var num = 1;
+    document.writeln(num);
+    num = add(num);
+    document.writeln(num);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //正则表达式对象
+    //var regExp = new RegExp("正则表达式")
+    //var regExp = /正则表达式/
+
+    // 必须以数字或者字母或者_开头，6-12个，一个或者没有数字结尾
+    // \d数字 \w 数字字母或_ {m,n}数量
+    // ?表示出现0次或者1次
+    var reg = new RegExp("^\\w{6,12}\\d{0,1}$");
+    reg = /^\w{6,12}\d{0,1}$/
+    var str = 'banbenlongyi';
+    document.writeln(reg.test(str));
+
+</script>
+</body>
+</html>

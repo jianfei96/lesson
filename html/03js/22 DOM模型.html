@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+
+<div class="class1">div4</div>
+<div class="class1">div5</div>
+
+<input type="text" name="username"><br><br>
+<script>
+    var divs = document.getElementsByTagName('div');
+    document.writeln('div:'+divs.length);
+    var class1 = document.getElementsByClassName('class1');
+    document.writeln('<br>class1:'+class1.length);
+    var table=document.createElement('table');
+    alert(table)
+</script>
+</body>
+</html>
