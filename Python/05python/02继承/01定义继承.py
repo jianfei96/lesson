@@ -10,6 +10,10 @@ class Father():
 
     def info(self):
         print(f'age:{self.age}')
+    def __str__(self):
+        return str(self.age)
+    def __del__(self):
+        print('deleted'+str(self.age))
 
 class Child(Father):
     pass#没有其他代码
@@ -17,3 +21,4 @@ class Child(Father):
 child = Child()
 child.info()
 print(f'age:{child.age}')
+print(child)
