@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- vf=true 显示内容 -->
+    <div v-if="login">登录</div>
+
+    <div v-if="level == 1">level1</div>
+    <div v-else-if="level == 2">level2</div>
+    <div v-else>level else</div>
+
+    <!--v-show="数据" 指定部分标签满足条件显示-->
+    <div v-if="seen">v-if</div>
+    <div v-show="seen">v-show</div>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            login: true,
+            level: 3,
+            seen: true
+        }
+    })
+</script>
+</html>

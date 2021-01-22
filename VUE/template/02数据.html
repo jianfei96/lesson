@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <a href="01入门.html">{{message}}</a>
+        <span>{{hello}}</span>
+        <!-- v-bind:绑定属性名 -->
+        <a v-bind:href="url">google</a>
+        <span :title="show">time</span>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'href',
+            hello: 'hello',
+            url: 'http://www.google.com',
+            show: '时间'+new Date().toLocaleString()
+        }
+    })
+</script>
+
+</html>

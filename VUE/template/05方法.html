@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="    login">login</button>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        methods: {//方法字段
+            //语法格式
+            //方法名:function(){}
+            login:function(){
+                alert('login')
+            }
+        }
+    });
+</script>
+</html>

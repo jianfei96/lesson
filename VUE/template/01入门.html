@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!-- 显示数据{{字段名}} -->
+    {{message}}
+</div>
+</body>
+<script>
+    /*vue语法
+    *var app = new Vue({
+    *  字段名：字段值
+    * }); */
+    var app = new Vue({
+        el:'#app',//el绑定页面组件:#id值
+        data: {//展示数据
+            message: 'hello vue'
+        }
+    });
+</script>
+</html>
