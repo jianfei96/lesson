@@ -7,17 +7,31 @@
 </head>
 <body>
 <div id="app">
-    <button v-on:click="    login">login</button>
+    <button v-on:click="login">login</button>
+    <a href="" @click="register">register</a>
+    <button @click="add(count)">count</button>
 </div>
 </body>
 <script>
     var app = new Vue({
         el: '#app',
+        data: {
+            count:1,
+            total:0
+        },
         methods: {//方法字段
             //语法格式
             //方法名:function(){}
             login:function(){
                 alert('login')
+            },
+            register:function(){
+                alert('register')
+            },
+            add:function(count){
+                //this 当前创建vue对象，获取data里面变量值
+                this.total += count;
+                alert(this.total);
             }
         }
     });

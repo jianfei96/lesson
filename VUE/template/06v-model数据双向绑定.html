@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <span>{{message}}</span>
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" name="username" v-model="username"></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input type="password" name="password" v-model="password"></td>
+        </tr>
+        <tr>
+            <td>性别</td>
+            <td>
+                男<input type="radio" name="sex" value="m" v-model="sex">
+                女<input type="radio" name="sex" value="w" v-model="sex">
+            </td>
+        </tr>
+        <tr>
+            <td>爱好</td>
+            <td>电影<input type="checkbox" value="movie" v-model="like"></td>
+            <td>玩<input type="checkbox" value="play" v-model="like"></td>
+        </tr>
+        <!--通过model绑定，无需form标签-->
+        <!-- v-model 输入框对象.value js代码获取用户输入的数据-->
+    </table>
+    <button v-on:click="register">register</button>
+</div>
+</body>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        //将数据保存到data数据字段
+        data:{
+            message: 'model',
+            username:'',
+            password:'',
+            sex:'',
+            like:[]
+        },
+        methods:{
+            register:function(){
+                alert(this.username+' '+this.password+' '+this.sex+' '+this.like)
+            }
+        }
+    })
+</script>
+</html>
