@@ -22,5 +22,6 @@ from . import  views
 
 urlpatterns = [
     # path('路径',显示views.py中的回显页面 views.函数名)
-    path('book/',views.index)
+    path('book/',views.index),
+    path('booklist/',views.booklist)
 ]
