@@ -26,5 +26,4 @@ urlpatterns = [
     # url(r'^$',views.index)
     # path(r'^$',views.index)
     path('login/', views.login, name='login')
-
 ]
