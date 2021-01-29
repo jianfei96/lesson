@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
+    <script src="{% static '/js/vue.js' %}"></script>
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+    <link rel="stylesheet" href="{% static '/css/reset.css' %}">
+    <script src="{% static '/js/axios-0.18.0.min.js' %}"></script>
 </head>
 <body>
+<div id="app">
+    <div class="login_top clearfix">
+        <a href="{% url 'index' %}" class="login_logo">
+            <img src="{% static '/img/logo.png' %}">
+        </a>
+    </div>
+    <div class="login_form_bg">
+        <div class="login_form_wrap">
+            {% comment %}显示一张图片{% endcomment %}
+            <div class="login_banner fl"></div>
+            <div class="slogan fl">
+                乐天 欢迎光临
+            </div>
+            <div class="login_form fr">
+                <div class="login_title">
+                    <a href="#">账户登录</a>
+                </div>
+                <div class="form_con">
+                    <div class="form_input cur">
+                        <form action="{% url 'login' %}" method="post" class="login"
+                              @submit="on_submit">{% comment %}url对应urls.py{% endcomment %}
+                            {% csrf_token %}
+                            <input type="text" name="username" v-model="username" @blur="check_username"
+                                   class="name_input" placeholder="请输入用户名">
+                            <div class="user_error" v-show="error_username">[[error_username_message]]</div>
+                            <input type="password" name="password" v-model="password" @blur="check_pwd"
+                                   class="pass_input" placeholder="请输入密码">
+                            <div class="pwd_error" v-show="error_password">[[error_password_message]]</div>
+                            <input type="submit" value="登录" class="input_submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="third_party">
+                    <a href="{% url 'register' %}" class="register_btn">立即注册</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer no-mp">
+            <div class="foot_link">
+                <a href="">服务</a>
+                <span>|</span>
+                <a href="">情报</a>
+                <span>|</span>
+                <a href="">信息</a>
+            </div>
+            <p>Rakuten, Inc.</p>
+        </div>
 
+    </div>
+</div>
 </body>
+<script src="{% static '/js/login.js' %}"></script>
 </html>

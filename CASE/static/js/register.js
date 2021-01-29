@@ -19,7 +19,8 @@ var vm = new Vue({
         phone: '',
         allow: true,
         error_allow: false,
-        error_allow_message: '请勾选用户协议'
+        error_allow_message: '请勾选用户协议',
+        host: '127.0.0.1:8000'
     },
     methods: {
         //检查用户名
@@ -28,9 +29,37 @@ var vm = new Vue({
             var re = /^[a-zA-Z0-9_-]{5,12}$/;
             if(re.test(this.username)){
                 this.error_name = false;
+
             }else {
                 this.error_name_message = '清输入5-12个字符用户名';
                 this.error_name = true;
+            }
+            console.log('err')
+            if(this.error_name == false){
+                //axios.js发送http请求，访问一个链接 get请求
+                //定义一个链接
+                var url =  '/username/' + this.username + '/count/';
+                //调试：查看数据
+                console.log(url);
+                /*axios语法：
+                axios.get(服务器网址,{数据格式:指定服务器发送过来的数据}).then(response=>{
+                    可以获取服务器发送过来的数据
+                }).catch(error=>{
+                    捕获异常/错误信息
+                })
+                */
+                axios.get(url,{
+                    responseType:'json'//json类似字典{数据名称:数据}
+                }).then(response=>{
+                    if (response.data.count>0){
+                        //查询用户名个数
+                        console.log(response.data.count)
+                        this.error_name = true
+                        this.error_name_message = '用户已存在'
+                    }
+                }).catch(error=>{
+                    console.log(error)
+                })
             }
         },
         //检查密码

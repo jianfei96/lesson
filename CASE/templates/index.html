@@ -105,8 +105,14 @@
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{% url 'register' %}">注册</a></li>{% comment %}urls.py{% endcomment %}
-                        <li><a href="#">登录</a></li>
+                        {% if username %}
+                            <li><a href="{% url 'register' %}">注册</a></li>{% comment %}urls.py{% endcomment %}
+                            <li><a>hello,{{ username }}</a></li>
+                        {% else %}
+                            <li><a href="{% url 'register' %}">注册</a></li>{% comment %}urls.py{% endcomment %}
+                            <li><a href="/login">登录</a></li>
+                        {% endif %}
+
 
                     </ul>
                 </div><!-- /.navbar-collapse -->
