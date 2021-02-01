@@ -1,0 +1,19 @@
+#searchbar {
+    border-color: deeppink;
+    border-width: 3px;
+    margin-top: 25px;
+}
+.bg-pink{background-color:pink!important}
+.navbar-pink {
+    background: pink;
+    color: gray;
+    height: 40px;
+
+}
+.nav-brand {
+    font-size: 25px;
+
+}
+.nounderline {
+  text-decoration: none !important
+}
